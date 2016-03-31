@@ -1,5 +1,5 @@
-% load test.mat
-% load train.mat
+load test.mat
+load train.mat
 
 c_HistsTrain = cell(750,1);
 c_HistsTest = cell(250,1);
