@@ -4,7 +4,8 @@ setup;
 
 net = initializeTextonsCNN() ;
 trainOpts.batchSize = 100 ;
-trainOpts.numEpochs = 5 ;
+
+trainOpts.numEpochs = 1 ;
 trainOpts.continue = true ;
 trainOpts.useGpu = false ;
 trainOpts.learningRate = 0.001 ;
