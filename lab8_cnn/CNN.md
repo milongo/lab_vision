@@ -14,5 +14,5 @@ Shown below are the confusion matrix of predictions and objective and error func
 ![Figure 1](https://github.com/milongo/lab_vision/blob/master/lab8_cnn/figure3.png)
 ![Figure 2](https://github.com/milongo/lab_vision/blob/master/lab8_cnn/net-train.png)
 
-
+As can be seen in the images above, classification was extremely poor. Perhaps a better design of the CNN architecture could be attempted. 
 
