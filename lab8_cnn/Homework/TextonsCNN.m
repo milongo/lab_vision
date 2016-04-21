@@ -8,7 +8,7 @@ if ~exist('textonsdbs.mat')
     setupdata;
 end
 
-train_net;
+% train_net;
 
 if exist('data/textons-experiment/textonscnn.mat');
     net = load('data/textons-experiment/textonscnn.mat');
@@ -29,13 +29,15 @@ end
 
 
 test_data = imdb.images.data(:,:,imdb.images.set==3);
-imageMean = mean(imdb.images.data(:));
-test_data = test_data - imageMean;
+% imageMean = mean(imdb.images.data(:)); %0.3947
+test_data = test_data - 0.3947;
 res = test_net(net,test_data);
 
 truth = imdb.images.label(imdb.images.set==3);
 
 CM = confusionmat(truth,res);
+figure;imshow(CM,[],'InitialMagnification',1600);
+title('Confusion matrix'); xlabel('Predictions'); ylabel('Groundtruth');
 
 function setupdata
 
